@@ -8,7 +8,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 100vh;
     margin: 0;
 }
 
@@ -23,6 +23,9 @@ body{
     font-size: 14px;
     margin-left: 10px;
     padding: 5px 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .container {
@@ -76,6 +79,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 10px;
 }
 
 .showcase li small{
@@ -100,5 +104,5 @@ p.text{
 }
 
 p.text span{
-    color: rgb(23, 131, 173);
-}
+    color: rgb(60, 117, 139);
+} 
