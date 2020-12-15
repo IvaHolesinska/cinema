@@ -6,6 +6,48 @@ const movieSelect = document.getElementById('movie');
 
 let ticketPrice = +movieSelect.value;
 
+        // add possible days to dropdown for date picker
+        var date_picker = document.getElementById("date_picker");
+
+        // define 7 days to the future from now
+        var nextDays = [];
+        var today = new Date();
+        for(var i = 0; i < 7; i++) {
+            nextDays.push(today.getDate() + i);
+        }
+        
+        console.log('xxdate: nextDays: ' + nextDays);
+
+        for (var i = 0; i < nextDays.length; i++) { 
+            var optn = nextDays[i]; 
+            var el = document.createElement("option"); 
+            el.textContent = optn; 
+            el.value = optn; 
+            date_picker.appendChild(el); 
+        }
+
+        // add possible times to dropdown for time picker
+        var time_picker = document.getElementById("time_picker");
+
+        var projectionTimes = [
+            '8:00',
+            '10:00',
+            '12:00',
+            '14:00',
+            '16:00',
+            '18:00',
+            '20:00'
+        ];
+
+        for (var i = 0; i < projectionTimes.length; i++) { 
+            var optn = projectionTimes[i]; 
+            var el = document.createElement("option"); 
+            el.textContent = optn; 
+            el.value = optn; 
+            time_picker.appendChild(el); 
+        }
+
+
 populateUI();
 
 // Save selected movie index and price
