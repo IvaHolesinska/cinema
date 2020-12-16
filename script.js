@@ -12,6 +12,7 @@ let ticketPrice = +movieSelect.value;
         // define 7 days to the future from now
         var nextDays = [];
         var today = new Date();
+
         for(var i = 0; i < 7; i++) {
             nextDays.push(today.getDate() + i);
         }
@@ -117,9 +118,4 @@ container.addEventListener('click', e => {
 
 // Initial count and total
 updateSelectedCount();
-
-    
-
-
-
 
